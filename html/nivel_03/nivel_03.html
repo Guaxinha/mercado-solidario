@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../assets/json/auth.js"></script>
+    <script>
+        // Verificar o nível do usuário (3 para esta página)
+        checkAccess(3);
+    </script>
+    <script src="../../assets/js/main.js" defer></script>
+    <script src="../../assets/json/app.js" defer></script>
+    <title>Nível 1</title>
+</head>
+<body>
+    <h1 id="username">Olá, usuário!</h1>
+    <p>Conteúdo exclusivo para usuários do nível 3.</p>
+    <a href="../assets/php/logout.php">Sair</a>
+
+    <p id="error-message"></p>
+
+    
+</body>
+</html>

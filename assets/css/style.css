@@ -1,0 +1,29 @@
+@import url('reset.css');
+@import url('login.css');
+@import url('dashboard.css');
+@import url('unauthorized.css');
+@import url('dialog.css');
+
+:root{
+    --color-white: #ffffff;
+    --color-white-dark: #202528;
+    --color-black: #202528;
+    --color-black-dark: #ffffff;
+    --color-dark-grey: #6e7784;
+    --color-grey: #a0a4ad;
+    --color-light-grey: #dce0f0;
+    --color-light-grey-dark: #100f13;
+    --color-beige: #f5f5f5;
+    --color-beige-dark: #191a1e;
+    --color-purple: #737feb;
+    --color-red: #fe7580;
+    --color-green: #3df8bd;
+    --color-alert-background-blue: #cce5ff;
+    --color-alert-font-blue: #00206d;
+    --color-alert-background-red: #f8d7da;
+    --color-alert-font-red: #721c24;
+    --color-alert-background-green: #d1e7dd;
+    --color-alert-font-green: #155724;
+    --color-alert-background-yellow: #fff3cd;
+    --color-alert-font-yellow: #856404;
+ }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <title>Dashboard</title>
+    <script src="../../assets/json/auth.js"></script>
+    <script>
+        // Verificar o nível do usuário (2 para esta página)
+        checkAccess(2);
+    </script>
+    <script src="../../assets/js/main.js" defer></script>
+    <script src="../../assets/json/app.js" defer></script>
+    <link rel="icon" href="data:,">
+</head>
+<body class="dashboard">
+    <header class="header">
+        <button class="menu-button open-menu" id="openButtonMenu"></button>
+        <div class="user-container">
+            <div class="mode-container">
+                <button type="button" class="mode-button" id="darkModeButton"></button>
+            </div>
+            <h1 class="header-user-title">Olá, <strong class="header-user-title-bold" id="username"></strong></h1>
+            <img class="header-user-image" src="#" id="userImage">
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <nav class="menu">
+                <button class="close-menu" id="closeButtonMenu"></button>
+                <ul class="menu-list">
+                    <li class="menu-item"><a href="dashboard_nv_02.html" class="menu-link">Dashboard</a></li>
+                    <li class="menu-item"><a href="alimentos_nv_02.html" class="menu-link">Produtos</a></li>
+                    <li class="menu-item"><a href="family_nv_02.html" class="menu-link">Famílias</a></li>
+                    <li class="menu-item"><a href="padrinhos_nv_02.html" class="menu-link">Padrinhos</a></li>
+                    <li class="menu-item"><a href="caixa_nv_02.html" class="menu-link">Caixa</a></li>
+                </ul>
+                <ul class="menu-list-user">
+                    <li class="menu-item"><a href="#" class="menu-link">Configurações</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Ajuda</a></li>
+                    <li class="menu-item"><img src="../../assets/images/logout-icon.svg" alt="Sair" class="menu-icon"><a href="../../assets/php/logout.php" class="menu-link">Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="dashboard-main">
+            <div class="dashboard-title-container">
+                <h1 class="dashboard-title" id="cashierTitle">Caixa</h1>
+                <div class="button-container">
+                    <p class="dashboard-date" id="date"></p>
+                    <a href="recibos.html" class="dashboard-button cashier-button">Ver Histórico &rarr;</a>
+                </div>
+            </div>
+            <div class="dashboard-search-container-cashier">
+                <div class="cashier-container-column">
+                    <select class="dialog-input-cashier" id="familyCashier">
+                    </select>
+                    <div class="cashier-container-double">
+                        <select class="dialog-input-cashier" id="productCode">
+                        </select>
+                        <p class="dialog-input-cashier" id="productName"></p>
+                    </div>
+                    <div class="cashier-container">
+                        <p class="dialog-input-cashier" id="priceProduct">2</p>
+                        <input type="number" placeholder="Quantidade" class="dialog-input-cashier" id="quantityProduct">
+                        <p class="dialog-input-cashier" id="totalProduct">1</p>
+                    </div>
+                    <button type="button" class="create-button button-cashier" id="addCashier">Adicionar</button>
+                </div>
+                <hr class="cashier-hr">
+                <div class="cashier-table">
+                    <table class="dashboard-table-cashier" id="cashierTable">
+                        <thead>
+                            <tr class="table-cashier table-header header-cashier">
+                                <th>Quantidade</th>
+                                <th>Código</th>
+                                <th>Produto</th>
+                                <th>Preço</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cashierTableBody">
+                        </tbody>
+                    </table>
+                    <h1 class="dashboard-title" id="cashierTotal">Total: 0</h1>
+                    <button type="button" class="create-button button-cashier" id="confirmCashier">Confirmar</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

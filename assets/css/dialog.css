@@ -1,0 +1,232 @@
+html[data-theme="dark"]{
+    .dialog{
+        background-color: var(--color-white-dark);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .dialog-title{
+        color: var(--color-black-dark);
+    }
+
+    .dialog-input{
+        background-color: var(--color-black);
+        color: var(--color-white);
+    }
+
+    .dialog-close{
+        color: var(--color-white);
+    }
+}
+
+dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+dialog[open] {
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 1em;
+    width: 70%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    max-height: 90vh;
+}
+
+.dialog-title{
+    font-size: 1.25rem;
+    margin: 0 0 1em 0;
+}
+
+.dialog-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-close{
+    align-self: flex-end;
+    padding: 0.5em;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.dialog-input{
+    border: none;
+    border-bottom: 1px solid var(--color-grey);
+    padding: 0.5em 0;
+    font-size: 0.75rem;
+    font-family: poppins;
+    margin: 0 0 1em 0;
+}
+
+.dialog-button{
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin: 1em auto;
+    width: 40%;
+    border: none;
+    cursor: pointer;
+}
+
+.radio-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dialog-label{
+    font-size: 0.75rem;
+}
+
+.documento-container{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    justify-content: space-between;
+}
+
+.dialog-subtitle{
+    margin: 1em 0 0 0;
+}
+
+.documento-container-button{
+    display: flex;
+}
+
+.dialog-button-add{
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    margin: 1em 0 0 auto;
+    border: none;
+    cursor: pointer;
+}
+
+.member-info{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    justify-content: space-between;
+}
+
+.member-title{
+    font-size: 0.75rem;
+}
+
+.member{
+    margin: 0 0 1em 0;
+}
+
+.dialog-text{
+    border-bottom: 1px solid var(--color-grey);
+    padding: 1em 0;
+}
+
+.button-container-delete{
+    margin: 1em 0 0 0;
+    display: grid;
+    grid-template-columns: 49% 49%;
+}
+
+.question-button{
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.list-member-container{
+    display: flex;
+}
+
+.member-table{
+    font-size: 0.75rem;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.member-line{
+    padding: 0.5em 0; 
+}
+
+.line-header{
+    font-weight: bold;
+}
+
+.family-main{
+    margin: 0 0 1em 0;
+}
+
+.family-text{
+    display: grid;
+    grid-template-columns: 25% 73%;
+    margin: 0 0 0.5em 0;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.family-strong{
+    font-weight: bold;
+}
+
+.family-sub{
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.family{
+    display: flex;
+    flex-direction: column;
+}
+
+#confirmDeleteDialog{
+    text-align: center;
+}
+
+#family{
+    font-size: 0.75rem;
+}
+
+@media screen and (min-width: 480px){
+    #confirmDeleteDialog{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 600px){
+    #confirmDeleteDialog{
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    dialog[open]{
+        width: 50%;
+    }
+
+    #confirmDeleteDialog{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    dialog[open]{
+        width: 30%;
+    }
+
+    #confirmDeleteDialog{
+        width: 20%;
+    }
+}

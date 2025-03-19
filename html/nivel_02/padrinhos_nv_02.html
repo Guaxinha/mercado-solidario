@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <title>Dashboard</title>
+    <script src="../../assets/json/auth.js"></script>
+    <script>
+        // Verificar o nível do usuário (2 para esta página)
+        checkAccess(2);
+    </script>
+    <script src="../../assets/js/main.js" defer></script>
+    <script src="../../assets/json/app.js" defer></script>
+    <link rel="icon" href="data:,">
+</head>
+<body class="dashboard">
+    <header class="header">
+        <button class="menu-button open-menu" id="openButtonMenu"></button>
+        <div class="user-container">
+            <div class="mode-container">
+                <button type="button" class="mode-button" id="darkModeButton"></button>
+            </div>
+            <h1 class="header-user-title">Olá, <strong class="header-user-title-bold" id="username"></strong></h1>
+            <img class="header-user-image" src="#" id="userImage">
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <nav class="menu">
+                <button class="close-menu" id="closeButtonMenu"></button>
+                <ul class="menu-list">
+                    <li class="menu-item"><a href="dashboard_nv_02.html" class="menu-link">Dashboard</a></li>
+                    <li class="menu-item"><a href="alimentos_nv_02.html" class="menu-link">Produtos</a></li>
+                    <li class="menu-item"><a href="family_nv_02.html" class="menu-link">Famílias</a></li>
+                    <li class="menu-item"><a href="padrinhos_nv_02.html" class="menu-link">Padrinhos</a></li>
+                    <li class="menu-item"><a href="caixa_nv_02.html" class="menu-link">Caixa</a></li>
+                </ul>
+                <ul class="menu-list-user">
+                    <li class="menu-item"><a href="#" class="menu-link">Configurações</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Ajuda</a></li>
+                    <li class="menu-item"><img src="../../assets/images/logout-icon.svg" alt="Sair" class="menu-icon"><a href="../../assets/php/logout.php" class="menu-link">Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="dashboard-main">
+            <div class="dashboard-title-container">
+                <h1 class="dashboard-title">Padrinhos</h1>
+                <div class="button-container">
+                    <p class="dashboard-date" id="date"></p>
+                </div>
+            </div>
+            <div class="dashboard-search-container-suport">
+                <div class="left-side-suport">
+                    <div class="button-container">
+                        <h1 class="dashboard-title">Padrinhos</h1>
+                        <button class="create-button-suport" id="addButton">+</button>
+                    </div>
+                    <table class="dashboard-table" id="suportTable">
+                        <thead>
+                            <tr class="table-support table-header">
+                                <th>Nome</th>
+                                <th>Celular</th>
+                            </tr>
+                        </thead>
+                        <tbody id="suportTableBody">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="right-side-suport">
+                    <div class="dashboard-title-container">         
+                        <div class="button-container">
+                            <h1 class="dashboard-title">A Receber</h1>
+                            <button class="create-button-suport" id="openSpportProduct">+</button>
+                        </div>
+                        <table class="dashboard-table" id="suportProductTable">
+                            <thead>
+                                <tr class="table-support-product table-header">
+                                    <th>Nome</th>
+                                    <th>Produto</th>
+                                    <th>Quantidade</th>
+                                </tr>
+                            </thead>
+                            <tbody id="suportProductTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <dialog class="dialog">
+        <button class="dialog-close" id="closeDialog">X</button>
+        <h1 class="dialog-title">Adicionar Padrinho</h1>
+        <form class="dialog-form">
+            <input type="text" placeholder="Nome" class="dialog-input" id="nameSupport">
+            <input type="text" placeholder="celular" class="dialog-input" id="phoneSupport">
+            <button type="button" class="dialog-button" id="addSupport">Adicionar</button>
+        </form>
+    </dialog>
+
+    <dialog id="supportProduct">
+        <button class="dialog-close" id="closeDialog">X</button>
+        <select class="dialog-input" id="selectProduct">
+        </select>
+        <select class="dialog-input" id="selectSupport">
+        </select>
+        <input type="number" placeholder="Quantidade" class="dialog-input" id="quantityProduct">
+        <button type="button" class="dialog-button" id="addSupportProduct">Adicionar</button>
+    </dialog>
+
+    <dialog id="confirmDeleteDialog">
+        <p class="dialog-text">Tem certeza que deseja excluir este padrinho?</p>
+        <div class="button-container-delete">
+            <button id="confirmDeleteButton" class="question-button">Sim</button>
+            <button id="cancelDeleteButton" class="question-button">Não</button>
+        </div>
+    </dialog>
+
+    <span class="warning-mensage" id="mensageDialog"></span>
+</body>
+</html>
